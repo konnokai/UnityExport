@@ -2,7 +2,8 @@
 using System.IO;
 
 namespace UnityExport
-{
+{ 
+    //CopyRight 孤之界 2018/01
     public class UnityExport
     {
         public static void ExportTexture(AssetPreloadData asset, string exportPath)
