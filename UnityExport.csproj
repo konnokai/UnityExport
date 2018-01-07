@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62137426-3287-431C-9418-550D6FC6D404}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityExport</RootNamespace>
+    <AssemblyName>UnityExport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Half">
+      <HintPath>.\System.Half.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ShaderResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShaderResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UnityExport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seven Zip\Common\CommandLineParser.cs" />
+    <Compile Include="Seven Zip\Common\CRC.cs" />
+    <Compile Include="Seven Zip\Common\InBuffer.cs" />
+    <Compile Include="Seven Zip\Common\OutBuffer.cs" />
+    <Compile Include="Seven Zip\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="Seven Zip\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="Seven Zip\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="Seven Zip\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="Seven Zip\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="Seven Zip\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="Seven Zip\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="Seven Zip\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="Seven Zip\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="Seven Zip\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="Seven Zip\ICoder.cs" />
+    <Compile Include="Seven Zip\SevenZipHelper.cs" />
+    <Compile Include="Unity Classes\AssetBundle.cs" />
+    <Compile Include="Unity Classes\AssetPreloadData.cs" />
+    <Compile Include="Unity Classes\AssetsFile.cs" />
+    <Compile Include="Unity Classes\AudioClip.cs" />
+    <Compile Include="Unity Classes\BuildSettings.cs" />
+    <Compile Include="Unity Classes\BundleFile.cs" />
+    <Compile Include="Unity Classes\ClassIDReference.cs" />
+    <Compile Include="Unity Classes\EndianStream.cs" />
+    <Compile Include="Unity Classes\Font.cs" />
+    <Compile Include="Unity Classes\GameObject.cs" />
+    <Compile Include="Unity Classes\helpers.cs" />
+    <Compile Include="Unity Classes\Lz4DecoderStream.cs" />
+    <Compile Include="Unity Classes\Material.cs" />
+    <Compile Include="Unity Classes\MeshFilter.cs" />
+    <Compile Include="Unity Classes\MeshRenderer.cs" />
+    <Compile Include="Unity Classes\MonoBehaviour.cs" />
+    <Compile Include="Unity Classes\PlayerSettings.cs" />
+    <Compile Include="Unity Classes\RectTransform.cs" />
+    <Compile Include="Unity Classes\Shader.cs" />
+    <Compile Include="Unity Classes\TextAsset.cs" />
+    <Compile Include="Unity Classes\Texture2D.cs" />
+    <Compile Include="Unity Classes\Transform.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ShaderResource.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
